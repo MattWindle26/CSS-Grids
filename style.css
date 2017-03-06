@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+/* DEFAULT CSS STYLES */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body{
+  background-color: #EEE;
+  padding: 50px 50px;
+}
+h1,h2,h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+p{
+  font-size: 1.7rem;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+p.content{
+  width: 100%;
+  max-width: 600px;
+  line-height: 1.5;
+}
+h1{
+  font-size: 4rem;
+}
+h1.title{
+  text-align: center;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 2.5rem;
+}
+.shadow{
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+.button{
+  padding: 10px 30px;
+  margin-top: 15px;
+  margin-right: 15px;
+  border:3px solid #428bca;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.25s ease;
+}
+.button > p{
+  font-weight: bold;
+}
+.button:hover{
+  cursor: pointer;
+  background-color: #428bca;
+}
+.button:hover > p{
+  color: #fff;
+}
+.show-grid{
+  animation: grid-animation 0.5s linear forwards;
+}
+@keyframes grid-animation {
+    0% {border: 3px solid rgba(255,41,41,0);}
+    100% {border: 3px solid rgba(255,41,41,1);}
+}
+/* CSS FOR CODE BOX */
+pre{
+  display: none;
+  width: 600px;
+  margin: 20px auto;
+  font-size: 1.6rem !important;
+  padding: 10px !important;
+  border: none;
+  background-color: #212121;
+}
+pre span.pln, pre span.pun, pre span.lit, pre span.kwd{
+  font-size: 1.5rem;
+}
+pre span.pln {
+  color: #ede7e7;
+}
+pre span.pun, pre span.opn, pre span.clo, pre span.lit, pre span.kwd {
+  color: #e5e5dc;
+}
+.hide-code{
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* CONTENT STYLES */
+
+.main-container{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.grid.example-one{
+  display: grid;
+  grid-template-columns: 2fr 4fr; /* divides area into 6 */
+  grid-template-rows: auto auto;
+  grid-column-gap: 2em;
+  grid-row-gap: 20px;
+}
+.grid.example-one header{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  padding: 20px;
+
+}
+.grid.example-one .side-left{
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  padding: 20px;
+
+}
+.grid.example-one article{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 20px;
+
+}
+.grid.example-one footer{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  padding: 20px;
+}
