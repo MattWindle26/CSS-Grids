@@ -11,19 +11,20 @@
    <h1 class="title" >CSS Grids</h1>
   <div class="main-container" >
     <main>
-      <div class="grid example-one shadow " >
+      <div class="grid example-one shadow mobile" >
         <header><h1>Example One</h1></header>
         <div class="side-left" >
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <article>
           <h2>What is a CSS Grid ?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>CSS Grids is a method of creating grid structures that are coded in CSS, not HTML. This allows the layout to be minipulated and changed using media queries.</p>
         </article>
-        <footer>The Footer</footer>
+        <footer><p>Example One - CSS Grid - Matthew Windle</p></footer>
       </div> <!-- end of example one -->
-      <div id="example-one-btn" class="button" ><p>Show Grid</p></div>
+      <div id="example-one-grid" class="button" ><p>Show Grid</p></div>
       <div id="example-one-code" class="button" ><p>Show Code</p></div>
+      <div id="example-one-mobile" class="button" ><p>Show Mobile</p></div>
       <pre class="prettyprint shadow">
         .grid.example-one{
           display: grid;
@@ -60,6 +61,8 @@
   </div>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/JS/ResizeSensor.js"></script>
+<script src="/JS/ElementQueries.js"></script>
 <script src="grid-css.js"></script>
 </body>
 </html>
