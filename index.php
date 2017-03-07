@@ -12,19 +12,26 @@
   <div class="main-container" >
     <main>
       <div class="grid example-one shadow mobile" >
-        <header><h1>Example One</h1></header>
+        <header><h1>Example One <span> - What is a CSS Grid ?</span></h1></header>
         <div class="side-left" >
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <nav>
+            <a href="#" >Example One</a>
+            <a href="#" >Example Two</a>
+            <a href="#" >Example Three</a>
+            <a href="#" >Example Four</a>
+          </nav>
+
         </div>
         <article>
-          <h2>What is a CSS Grid ?</h2>
-          <p>CSS Grids is a method of creating grid structures that are coded in CSS, not HTML. This allows the layout to be minipulated and changed using media queries.</p>
+          <p class="content">CSS Grids is a method of creating grid structures that are coded in CSS, not HTML. This allows the layout to be minipulated and changed using media queries.</p>
+          <p class="content">Webpages have changed a lot over the years with how content was set out on a page. It started off with table layouts, then floats, which followed onto positioning and inline-blocks, but these methods were missing a lot of important functions.</p>
         </article>
         <footer><p>Example One - CSS Grid - Matthew Windle</p></footer>
       </div> <!-- end of example one -->
-      <div id="example-one-grid" class="button" ><p>Show Grid</p></div>
-      <div id="example-one-code" class="button" ><p>Show Code</p></div>
-      <div id="example-one-mobile" class="button" ><p>Show Mobile</p></div>
+      <div class="button-wrapper" >
+        <div id="example-one-grid" class="button" ><p>Show Grid</p></div>
+        <div id="example-one-code" class="button" ><p>Show CSS</p></div>
+      </div>
       <pre class="prettyprint shadow">
         .grid.example-one{
           display: grid;
@@ -61,8 +68,6 @@
   </div>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/JS/ResizeSensor.js"></script>
-<script src="/JS/ElementQueries.js"></script>
 <script src="grid-css.js"></script>
 </body>
 </html>

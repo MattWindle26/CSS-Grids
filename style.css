@@ -20,17 +20,24 @@ h1,h2,h3{
   margin-bottom: 15px;
 }
 p{
-  font-size: 1.7rem;
+  font-size: 1.85rem;
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
 }
 p.content{
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   line-height: 1.5;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 h1{
   font-size: 4rem;
+}
+h1 span{
+  font-size: 2.5rem;
+  vertical-align: middle;
+
 }
 h1.title{
   text-align: center;
@@ -100,6 +107,26 @@ pre span.pun, pre span.opn, pre span.clo, pre span.lit, pre span.kwd {
   top: 0;
   right: 0;
 }
+/* NAV STYLES */
+
+nav{
+    display: flex;
+    flex-direction: column;
+
+}
+nav a{
+  font-size: 1.7rem;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+nav a:hover{
+  text-decoration: underline;
+}
+
 /* CONTENT STYLES */
 
 .main-container{
@@ -107,56 +134,36 @@ pre span.pun, pre span.opn, pre span.clo, pre span.lit, pre span.kwd {
   max-width: 1440px;
   margin: 0 auto;
 }
+.button-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 .grid.example-one{
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 2fr 4fr; /* divides area into 6 */
+  grid-template-columns: 200px 4fr; /* divides area into 6 */
   grid-template-rows: auto auto;
   grid-column-gap: 2em;
   grid-row-gap: 20px;
   background-color: #FFF;
 
 }
-.grid.example-one[max-width~="425px"]{
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: 1fr; /* divides area into 6 */
-  grid-template-rows: auto;
-  grid-column-gap: 2em;
-  grid-row-gap: 20px;
-}
+
 .grid.example-one header{
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   padding: 20px;
-
-}
-.grid.example-one header[max-width~="425px"]{
-  grid-column: 1 / 1;
-  grid-row: 1 / 2;
-  padding: 20px;
-
 }
 .grid.example-one .side-left{
   grid-column: 1 / 2;
   grid-row: 2 / 4;
   padding: 20px;
-
-}
-.grid.example-one .side-left[max-width~="425px"]{
-  grid-column: 1 / 1;
-  grid-row: 3 / 4;
-  padding: 20px;
-
 }
 .grid.example-one article{
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  padding: 20px;
-
-}
-.grid.example-one article[max-width~="425px"]{
-  grid-column: 1 / 1;
   grid-row: 2 / 3;
   padding: 20px;
 
@@ -171,10 +178,4 @@ pre span.pun, pre span.opn, pre span.clo, pre span.lit, pre span.kwd {
   text-align: center;
   font-size: 1.4rem;
   color: #ddd;
-}
-
-.grid.example-one footer[max-width~="425px"]{
-  grid-column: 1 / 1;
-  grid-row: 4 / 5;
-  padding: 20px;
 }

@@ -14,21 +14,10 @@ $('#example-one-grid').on('click', function() {
 
 $( "#example-one-code" ).click(function() {
     if($('pre').is(':visible')){
-      $('#example-one-code p').text('Show Code');
+      $('#example-one-code p').text('Show CSS');
     }
     else{
-      $('#example-one-code p').text('Hide Code');
+      $('#example-one-code p').text('Hide CSS');
     }
     $('pre').slideToggle("slow");
-});
-
-
-$( "#example-one-mobile" ).click(function() {
-    if($('pre').is(':visible')){
-      $('#example-one-mobile p').text('Show Mobile');
-    }
-    else{
-      $('#example-one-mobile p').text('Hide Mobile');
-    }
-    $('.grid.example-one').toggleClass('show-mobile');
 });
