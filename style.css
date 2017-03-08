@@ -12,6 +12,7 @@ body{
   background-color: #EEE;
   padding: 50px 50px;
   min-height: 1000px;
+  position: relative;
 }
 h1,h2,h3{
   font-family: 'Montserrat', sans-serif;
@@ -27,9 +28,9 @@ p{
 p.content{
   width: 100%;
   max-width: 650px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.75;
   font-weight: 400;
+  margin: 0 auto 20px auto;
 }
 h1{
   font-size: 4rem;
@@ -81,16 +82,31 @@ h3{
 .show-mobile{
   width: 425px !important;
 }
-
+.close-btn{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 /* CSS FOR CODE BOX */
+.overlay{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.75);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 pre{
   display: none;
   width: 600px;
-  margin: 20px auto;
+  margin: 70px auto;
   font-size: 1.6rem !important;
   padding: 10px !important;
   border: none;
   background-color: #212121;
+
 }
 pre span.pln, pre span.pun, pre span.lit, pre span.kwd{
   font-size: 1.5rem;
@@ -122,9 +138,12 @@ nav a{
   font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
+  padding: 5px;
+  transition: all 0.25s ease;
 }
 nav a:hover{
-  text-decoration: underline;
+  background-color: #333;
+  color: #fff;
 }
 
 /* CONTENT STYLES */
@@ -144,7 +163,7 @@ nav a:hover{
 .grid.example-one{
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 200px 4fr; /* divides area into 6 */
+  grid-template-columns: 250px 8fr; /* divides area into 6 */
   grid-template-rows: auto auto;
   grid-column-gap: 2em;
   grid-row-gap: 20px;
@@ -178,4 +197,29 @@ nav a:hover{
   text-align: center;
   font-size: 1.4rem;
   color: #ddd;
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    padding: 20px;
+  }
+  .grid.example-one{
+    grid-template-columns: 1fr; /* divides area into 6 */
+  }
+  .grid.example-one header{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .grid.example-one .side-left{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .grid.example-one article{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .grid.example-one footer{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
 }

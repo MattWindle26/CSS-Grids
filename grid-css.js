@@ -1,6 +1,4 @@
 
-
-
 $('#example-one-grid').on('click', function() {
   if($('.grid.example-one header').hasClass('show-grid')){
     $('#example-one-grid p').text('Show Grid');
@@ -13,6 +11,9 @@ $('#example-one-grid').on('click', function() {
 
 
 $( "#example-one-code" ).click(function() {
+
+  $('.overlay').css('display','block');
+
     if($('pre').is(':visible')){
       $('#example-one-code p').text('Show CSS');
     }
@@ -20,4 +21,10 @@ $( "#example-one-code" ).click(function() {
       $('#example-one-code p').text('Hide CSS');
     }
     $('pre').slideToggle("slow");
+});
+
+$('.close-btn').click(function(){
+  $('.overlay').css('display','none');
+  $('pre').slideToggle("slow");
+  $('#example-one-code p').text('Show CSS');
 });
