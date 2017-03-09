@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <img class="logo" src="/images/logo.png" alt="Circle grid logo" width="100">
   <title>CSS Grids</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
@@ -44,18 +45,18 @@
    <h1 class="title" >CSS Grids</h1>
   <div class="main-container" >
     <main>
-      <div class="grid example-one shadow mobile" >
+      <div class="grid example-one shadow" >
         <header><h1>What are CSS Grids?</h1></header>
         <div class="side-left" >
           <nav>
             <a href="/index.php" >What are CSS Grids</a>
-            <a href="example-two.php" >Example Two</a>
+            <a href="example-two.php" >Blog Post Layout</a>
             <a href="#" >Example Three</a>
             <a href="#" >Example Four</a>
             <a href="#" >Final Website</a>
           </nav>
         </div>
-        <article>
+        <article class="post">
           <p class="content">CSS Grids is a method of creating grid structures that are coded in CSS, not HTML. This allows the layout to be minipulated and changed using media queries.</p>
           <p class="content">Webpages have changed a lot over the years with how content was set out on a page. It started off with table layouts, then floats, which followed onto positioning and inline-blocks, but these methods were missing a lot of important functions.</p>
           <h2>What about Flexbox ?</h2>
@@ -73,7 +74,6 @@
         <footer><p>Example One - CSS Grid - Matthew Windle</p></footer>
       </div> <!-- end of example one -->
       <div class="button-wrapper" >
-        <div id="example-one-grid" class="button" ><p>Show Grid</p></div>
         <div id="example-one-code" class="button" ><p>Show CSS</p></div>
       </div>
 

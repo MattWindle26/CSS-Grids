@@ -10,7 +10,7 @@
 }
 body{
   background-color: #EEE;
-  padding: 50px 50px;
+  padding: 20px;
   min-height: 1000px;
   position: relative;
 }
@@ -18,7 +18,6 @@ h1,h2,h3{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 15px;
 }
 p, li{
   font-size: 1.85rem;
@@ -36,6 +35,11 @@ p.content > a{
   font-size: 1.85rem;
   color: #333;
   padding: 5px;
+}
+p.small{
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #c1c1c1;
 }
 strong{
   font-size: 1.85rem;
@@ -67,10 +71,17 @@ h1 span{
 }
 h1.title{
   text-align: center;
+  margin-bottom: 20px;
+}
+h1.title::after{
+  content: '';
+  display: block;
+  border-bottom: 3px solid #333;
+  width: 100px;
+  margin: 10px auto;
 }
 h2{
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 h3{
   font-size: 2.5rem;
@@ -152,6 +163,10 @@ pre span.pun, pre span.opn, pre span.clo, pre span.lit, pre span.kwd {
   top: 0;
   right: 0;
 }
+img.logo{
+  display: block;
+  margin: 10px auto;
+}
 /* NAV STYLES */
 
 nav{
@@ -175,7 +190,6 @@ nav a:hover, p.content > a:hover{
   background-color: #333;
   color: #fff;
 }
-
 /* CONTENT STYLES */
 
 .main-container{
@@ -210,7 +224,7 @@ nav a:hover, p.content > a:hover{
   padding: 20px;
   background-color: #e3e3e3;
 }
-.grid.example-one article{
+.grid.example-one article.post{
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   padding: 20px;
@@ -228,39 +242,45 @@ nav a:hover, p.content > a:hover{
   color: #ddd;
 }
 
-.grid.example-two{
+/* EXAMPLE TWO CSS */
+.blog-grid{
   display: grid;
-  margin: 0 auto;
-  grid-template-columns: 2fr;
-  grid-template-rows: auto auto;
-  grid-row-gap: 20px;
-  grid-column-gap: 2em;
-  background-color: #FFF;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
 }
-.grid.example-two header{
-  grid-column: 1 / 5;
-  grid-row: 1 / 1;
-  background-color: pink;
-  padding: 20px 20px 0 20px;
+.blog-grid article{
+  padding: 0 20px 20px 20px;
+  transition: all 0.25s ease-in-out;
 }
-.grid.example-two section{
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
-  grid-column-gap: 2em;
-  grid-column: 1 / 5;
-
+.blog-grid article:hover{
+  transform: scale(1.05);
+  cursor: pointer;
 }
-.grid.example-two section article{
-  padding: 20px;
-  background-color: red;
+.blog-grid article h2{
+  margin-bottom: 10px;
 }
-
-@media screen and (max-width: 480px) {
-  body{
-    padding: 20px;
+.blog-grid article img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.content-block{
+  padding: 0 20px;
+  grid-column: 1 / 4;
+}
+@media screen and (max-width: 425px) {
+  .blog-grid{
+    grid-template-columns: repeat(1, 1fr);
   }
+}
+@media screen and (max-width: 1050px) {
+  .blog-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
   .grid.example-one{
-    grid-template-columns: 1fr; /* divides area into 6 */
+    grid-template-columns: 1fr;
   }
   .grid.example-one header{
     grid-column: 1 / 2;
@@ -270,12 +290,15 @@ nav a:hover, p.content > a:hover{
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
-  .grid.example-one article{
+  .grid.example-one article.post{
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
   .grid.example-one footer{
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+  }
+  .blog-grid{
+    grid-template-columns: 1fr 1fr;
   }
 }
