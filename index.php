@@ -6,6 +6,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 </head>
 <body>
   <div class="overlay" >
@@ -44,7 +45,7 @@
   <div class="main-container" >
     <main>
       <div class="grid example-one shadow mobile" >
-        <header><h1>Example One <span> - What is a CSS Grid ?</span></h1></header>
+        <header><h1>What are CSS Grids?</h1></header>
         <div class="side-left" >
           <nav>
             <a href="/index.php" >What are CSS Grids</a>
@@ -53,11 +54,21 @@
             <a href="#" >Example Four</a>
             <a href="#" >Final Website</a>
           </nav>
-
         </div>
         <article>
           <p class="content">CSS Grids is a method of creating grid structures that are coded in CSS, not HTML. This allows the layout to be minipulated and changed using media queries.</p>
           <p class="content">Webpages have changed a lot over the years with how content was set out on a page. It started off with table layouts, then floats, which followed onto positioning and inline-blocks, but these methods were missing a lot of important functions.</p>
+          <h2>What about Flexbox ?</h2>
+          <p class="content">When researching CSS Grids a couple of common questions are asked;
+            <ul>
+              <li>What happens to Flexbox ?</li>
+              <li> Can we still use Flexbox ?</li>
+            </ul>
+          </p>
+          <p class="content">As mentioned by Rachel Andrew over at <a href="http://gridbyexample.com/what/" >GridsByExample</a></p>
+          <blockquote>
+              <p>Flexbox is for one-dimensional layouts - anything that needs to be laid out in a straight line (or in a broken line, which would be a single straight line if they were joined back together).</p>
+          </blockquote>
         </article>
         <footer><p>Example One - CSS Grid - Matthew Windle</p></footer>
       </div> <!-- end of example one -->
