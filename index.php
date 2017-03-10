@@ -50,8 +50,8 @@
         <div class="side-left" >
           <nav>
             <a href="/index.php" >What are CSS Grids</a>
-            <a href="example-two.php" >Blog Post Layout</a>
-            <a href="#" >Example Three</a>
+            <a href="/example-two.php" >Blog Post Layout</a>
+            <a href="/example-three.php" >Example Three</a>
             <a href="#" >Example Four</a>
             <a href="#" >Final Website</a>
           </nav>

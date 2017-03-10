@@ -28,3 +28,14 @@ $('.close-btn').click(function(){
   $('pre').slideToggle("slow");
   $('#example-one-code p').text('Show CSS');
 });
+
+$('#example-two-4col').click(function(){
+  $('.blog-grid').css('grid-template-columns','repeat(4, 1fr)')
+});
+
+$('#example-two-3col').click(function(){
+  $('.blog-grid').css('grid-template-columns','repeat(3, 1fr)')
+});
+$('#example-two-2col').click(function(){
+  $('.blog-grid').css('grid-template-columns','repeat(2, 1fr)')
+});

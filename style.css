@@ -146,7 +146,11 @@ pre{
   padding: 10px !important;
   border: none;
   background-color: #212121;
-
+}
+pre.prettyprint-inline {
+  display: block;
+  margin: 20px auto;
+  text-align: left;
 }
 pre span.pln, pre span.pun, pre span.lit, pre span.kwd{
   font-size: 1.5rem;
@@ -266,13 +270,8 @@ nav a:hover, p.content > a:hover{
 }
 .content-block{
   padding: 0 20px;
-  grid-column: 1 / 4;
 }
-@media screen and (max-width: 425px) {
-  .blog-grid{
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
+
 @media screen and (max-width: 1050px) {
   .blog-grid{
     grid-template-columns: repeat(2, 1fr);
@@ -298,7 +297,9 @@ nav a:hover, p.content > a:hover{
     grid-column: 1 / 2;
     grid-row: 4 / 5;
   }
+}
+@media screen and (max-width: 560px) {
   .blog-grid{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
