@@ -272,6 +272,52 @@ nav a:hover, p.content > a:hover{
   padding: 0 20px;
 }
 
+/* EXAMPLE THREE CSS */
+
+.grid-template-example{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-areas:
+  "header header header"
+  "leftside main rightside"
+  "leftside footer footer";
+
+}
+.grid-template-header{
+  border: 3px solid #333;
+  grid-area: header;
+  padding: 20px;
+}
+.grid-template-leftside{
+  border: 3px solid #333;
+  grid-area: leftside;
+  padding: 20px;
+}
+.grid-template-main{
+  border: 3px solid #333;
+  grid-area: main;
+  padding: 20px;
+}
+.grid-template-rightside{
+  border: 3px solid #333;
+  grid-area: rightside;
+  padding: 20px;
+}
+.grid-template-footer{
+  border: 3px solid #333;
+  grid-area: footer;
+  padding: 20px;
+}
+
+
+
+
+
+
 @media screen and (max-width: 1050px) {
   .blog-grid{
     grid-template-columns: repeat(2, 1fr);
