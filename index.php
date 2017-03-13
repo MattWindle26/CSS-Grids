@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <img class="logo" src="/images/logo.png" alt="Circle grid logo" width="100">
   <title>CSS Grids</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/main-style.css">
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 </head>
 <body>
+  <div class="message-box box1 shadow" >
+    <img src="/images/matt.png" >
+    <p>Did you know that this page is even made in CSS Grids!</p>
+  </div>
   <div class="overlay" >
     <img class="close-btn" src="/images/error.svg" width="50px">
     <pre class="prettyprint shadow">
@@ -42,6 +45,7 @@
       }
     </pre>
   </div>
+  <img class="logo" src="/images/logo.png" alt="Circle grid logo" width="100">
    <h1 class="title" >CSS Grids</h1>
   <div class="main-container" >
     <main>
@@ -50,10 +54,9 @@
         <div class="side-left" >
           <nav>
             <a href="/index.php" >What are CSS Grids</a>
-            <a href="/example-two.php" >Blog Post Layout</a>
-            <a href="/example-three.php" >Example Three</a>
-            <a href="#" >Example Four</a>
-            <a href="#" >Final Website</a>
+            <a href="/example-two.php" >Blog Post Grid </a>
+            <a href="/example-three.php" >Blog Post</a>
+            <a href="/final-page.php" >Final Website</a>
           </nav>
         </div>
         <article class="post">

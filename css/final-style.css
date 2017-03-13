@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+/* DEFAULT CSS STYLES */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body{
+  background-color: #EEE;
+  padding: 20px;
+  min-height: 1000px;
+  position: relative;
+}
+h1,h2,h3,h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+p, li, a{
+  font-size: 1.85rem;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+h1{
+  font-size: 4rem;
+}
+h1.title{
+  text-align: center;
+  margin-bottom: 20px;
+}
+h1.title::after{
+  content: '';
+  display: block;
+  border-bottom: 3px solid #333;
+  width: 100px;
+  margin: 10px auto;
+}
+h2{
+  font-size: 2.5rem;
+}
+h3{
+  font-size: 2.5rem;
+}
+.shadow{
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+img.logo{
+  display: block;
+  margin: 10px auto;
+}
+
+/* NAV STYLES FINAL */
+nav {
+  display: flex;
+  flex-direction: row;
+}
+nav a{
+  padding: 10px;
+  text-decoration: none;
+  color:#333;
+}
+nav a.active{
+  background-color: #333;
+  color: #fff;
+}
+nav a:hover{
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+
+/* MAIN STYLES FINAL */
+header{
+  background-color: #FFF;
+  width: 100%;
+  max-width: 1440px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+main{
+  background-color: #FFF;
+  width: 100%;
+  max-width: 1440px;
+  height: 500px;
+}
+.grid{
+  padding: 20px;
+  display: grid;
+  grid-template-columns:2fr 2fr 2fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+}
+.box{
+  height: 400px;
+  background-color: red;
+}

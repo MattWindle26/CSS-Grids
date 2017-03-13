@@ -1,3 +1,15 @@
+$(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  if (wScroll > 150){
+    $('.box2').addClass('shown');
+  }
+  if (wScroll > 50){
+    $('.box1').addClass('shown');
+  }
+})
+
 
 $('#example-one-grid').on('click', function() {
   if($('.grid.example-one header').hasClass('show-grid')){

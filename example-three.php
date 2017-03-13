@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <img class="logo" src="/images/logo.png" alt="Circle grid logo" width="100">
   <title>CSS Grids</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/main-style.css">
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 </head>
 <body>
@@ -15,6 +14,7 @@
     <pre class="prettyprint shadow">
     </pre>
   </div>
+  <img class="logo" src="/images/logo.png" alt="Circle grid logo" width="100">
    <h1 class="title" >CSS Grids</h1>
   <div class="main-container" >
     <main>
@@ -23,10 +23,9 @@
         <div class="side-left" >
           <nav>
             <a href="/index.php" >What are CSS Grids</a>
-            <a href="/example-two.php" >Blog Post Layout</a>
-            <a href="/example-three.php" >Example Three</a>
-            <a href="#" >Example Four</a>
-            <a href="#" >Final Website</a>
+            <a href="/example-two.php" >Blog Post Grid </a>
+            <a href="/example-three.php" >Blog Post</a>
+            <a href="/final-page.php" >Final Website</a>
           </nav>
         </div>
         <section>
@@ -43,7 +42,7 @@
             </div>
             <div class="grid-template-breadcrumbs" >
               <ul class="breadcrumbs">
-                <li>Blog | </li>
+                <li>Blog</li>
                 <li>Performance and Optimisation</li>
               </ul>
             </div>
@@ -76,10 +75,12 @@
 
                   <p>Well like the code validation tool there is a tool to check how well your website performs in speed and user experience. Google provide the <a href="https://developers.google.com/speed/pagespeed/insights/" >PageSpeed Insights </a>. All you need to do is provide the URL of the website you want to test and you receive a detailed report outlining how the page can be more optimised. </p>
 
+                  <a href="http://matthewwindle.com/blog/performance-and-optimisation.php" >Read the full post</a>
+
             </div>
             <div class="grid-template-rightside">
               <p class="advert-text" >Advertisement</p>
-              <img src="/images/matt.png" alt="advertisment example" >
+              <img src="/images/mw-logo.png" alt="advertisment example" >
             </div>
             <div class="grid-template-footer"></div>
           </div>
