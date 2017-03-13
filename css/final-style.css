@@ -71,6 +71,16 @@ nav a:hover{
   cursor: pointer;
 }
 
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-media img{
+  width: 35px;
+  margin-right: 5px;
+}
 
 /* MAIN STYLES FINAL */
 header{
@@ -84,17 +94,91 @@ main{
   background-color: #FFF;
   width: 100%;
   max-width: 1440px;
-  height: 500px;
 }
+
 .grid{
+  width: 100%;
+  margin: 0 auto;
   padding: 20px;
   display: grid;
   grid-template-columns:2fr 2fr 2fr 2fr;
   grid-template-rows: auto;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  grid-template-areas:
+  "featured-img featured-img featured-details featured-details"
+  "blog-grid blog-grid blog-grid blog-grid";
 }
-.box{
-  height: 400px;
-  background-color: red;
+.grid-menu{
+  grid-area: grid-menu;
+  width: 100%;
+  background-color: pink;
+  padding: 20px;
+}
+.featured-img{
+  grid-area: featured-img;
+  background-color: #333;
+  background-image: url(/images/blog-header-large.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.featured-img img{
+  object-fit: contain;
+  width: 100%;
+}
+.featured-details{
+  grid-area: featured-details;
+  padding: 40px;
+}
+.featured-details h2{
+  margin-bottom: 20px;
+}
+.featured-details p{
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.read-more-btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #428BCA;
+  display: inline-block;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+.read-more-btn:hover{
+  background-color: #428BCA;
+}
+.read-more-btn p{
+  font-weight: 800;
+  transition: all 0.25s ease-in-out;
+  margin-bottom: 0;
+}
+.read-more-btn:hover p{
+  color: #fff;
+}
+.blog-grid{
+  grid-area: blog-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  grid-column-gap: 2em;
+}
+.blog-grid article{
+  transition: all 0.25s ease-in-out;
+}
+.blog-grid article:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.blog-grid article h2{
+  margin-bottom: 10px;
+}
+.blog-grid article img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.content-block{
+  padding: 0 20px;
 }

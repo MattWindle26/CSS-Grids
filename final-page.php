@@ -9,26 +9,54 @@
   <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
 </head>
 <body>
-<header>
+<header class="shadow">
   <nav>
     <a href="/coming-soon.php" >Home</a>
-    <a href="/coming-soon.php" >Women</a>
-    <a class="active" href="/final-page.php" >Men</a>
+    <a href="/coming-soon.php" >Work</a>
+    <a class="active" href="/final-page.php" >Blog</a>
     <a href="/coming-soon.php" >Contact</a>
   </nav>
-  <div class="search">
+  <div class="social-media">
+    <a href="" ><img src="/images/SVG-icons/facebook.svg" alt="Facebook Logo"></a>
+    <a href="" ><img src="/images/SVG-icons/twitter.svg" alt="Twitter Logo"></a>
+    <a href="" ><img src="/images/SVG-icons/instagram.svg" alt="Instagram Logo"></a>
   </div>
 </header>
 
 <main class="shadow">
 
   <div class="grid">
-    <div class="box" ></div>
-    <div class="box" ></div>
-    <div class="box" ></div>
-    <div class="box" ></div>
-  </div>
+    <div class="featured-img" >
+    </div>
+    <div class="featured-details" >
+      <h2>Performance and Optimisation</h2>
+      <p>So, the website is finished, everything looks awesome. One question, how well does it perform?<p>
 
+      <p>It’s all good having a website that looks good, but it’s no good if firstly, no one can find it and secondly, when people find it it takes a week to load. Luckily there are some cool tricks and tips that can help all of this.</p>
+      <div class="read-more-btn" ><p>Read Blog Post</p></div>
+    </div>
+    <div class="blog-grid">
+      <article>
+        <img src="/images/code.jpg" alt="Woman standing on mountain with keep exploring written on a flag">
+        <h2>Building my portfolio</h2>
+        <p class="small">1st March 2017 - Matthew Windle</p>
+        <p>When it comes down to starting a project one of the first things I do is figure out what the website is going to be used for, what’s the aim of the website.</p>
+      </article>
+      <article>
+        <img src="/images/office.jpg" alt="Woman standing on mountain with keep exploring written on a flag">
+        <h2>The Industry</h2>
+        <p class="small">1st March 2017 - Matthew Windle</p>
+        <p>So you want to be part of the digital industry? Good, because it is one of the biggest growing industries in the UK right now.</p>
+      </article>
+      <article>
+        <img src="/images/blog-post.jpg" alt="Woman standing on mountain with keep exploring written on a flag">
+        <h2>Blog Title</h2>
+        <p class="small">1st March 2017 - Matthew Windle</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      </article>
+    </div>
+
+  </div>
 </main>
 
 
