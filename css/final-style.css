@@ -51,7 +51,33 @@ img.logo{
   display: block;
   margin: 10px auto;
 }
-
+.message-box{
+  background-color: #333;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  margin-bottom: 20px;
+}
+.message-box img{
+  width: 100px;
+  height: 100px;
+}
+.message-box p{
+  color: #f7f7f7;
+  padding: 10px 20px;
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+.message-box.shown{
+  animation: box-animation 0.55s cubic-bezier(0, 0, 0, 2.85) forwards;
+}
 /* NAV STYLES FINAL */
 nav {
   display: flex;
@@ -95,6 +121,19 @@ main{
   width: 100%;
   max-width: 1440px;
 }
+footer{
+  background-color: #FFF;
+  width: 100%;
+  max-width: 1440px;
+  padding: 20px;
+  margin-top: 20px;
+}
+p.copyright, p.copyright a{
+  font-size: 1.3rem;
+  text-align: center;
+  color: #333;
+}
+
 
 .grid{
   width: 100%;
@@ -108,12 +147,6 @@ main{
   grid-template-areas:
   "featured-img featured-img featured-details featured-details"
   "blog-grid blog-grid blog-grid blog-grid";
-}
-.grid-menu{
-  grid-area: grid-menu;
-  width: 100%;
-  background-color: pink;
-  padding: 20px;
 }
 .featured-img{
   grid-area: featured-img;
@@ -149,12 +182,14 @@ main{
 .read-more-btn:hover{
   background-color: #428BCA;
 }
-.read-more-btn p{
+.read-more-btn p, .read-more-btn p a {
   font-weight: 800;
   transition: all 0.25s ease-in-out;
   margin-bottom: 0;
+  text-decoration: none;
+  color: #333;
 }
-.read-more-btn:hover p{
+.read-more-btn:hover p a{
   color: #fff;
 }
 .blog-grid{
@@ -165,12 +200,13 @@ main{
   grid-auto-flow: row;
   grid-column-gap: 2em;
 }
-.blog-grid article{
-  transition: all 0.25s ease-in-out;
+.blog-grid a{
+  color: #333;
+  text-decoration: none;
 }
-.blog-grid article:hover{
-  transform: scale(1.05);
-  cursor: pointer;
+p.small{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 .blog-grid article h2{
   margin-bottom: 10px;
@@ -181,4 +217,113 @@ main{
 }
 .content-block{
   padding: 0 20px;
+}
+.blog-grid article{
+margin-bottom: 20px;
+}
+.blog-grid article:hover h2{
+  text-decoration: underline;
+}
+
+
+/* Blog Post CSS */
+
+.post-grid{
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns:2fr 2fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-areas:
+  "blog-post-img blog-post-img blog-post-img"
+}
+.post-grid .post-image{
+  width: 100%;
+  grid-area: blog-post-img;
+  height: 400px;
+  background-image: url(/images/blog-header-large.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+  .grid{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+    "featured-img featured-img"
+    "featured-details featured-details"
+    "blog-grid blog-grid";
+  }
+  .featured-img{
+    width: 100%;
+    height: 400px;
+    /* width and height needed to be specified due to nothing on the same row */
+  }
+  .blog-grid{
+    grid-area: blog-grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-column-gap: 2em;
+  }
+  .blog-grid article{
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+  }
+  .featured-details{
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 575px){
+    header{
+      flex-direction: column;
+    }
+    nav{
+      margin-bottom: 20px;
+    }
+    .grid{
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns:1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+      grid-template-areas:
+      "featured-img"
+      "featured-details"
+      "blog-grid";
+    }
+    .featured-img{
+      width: 100%;
+      height: 200px;
+      /* width and height needed to be specified due to nothing on the same row */
+    }
+    .featured-details{
+      padding: 0;
+    }
+    .blog-grid{
+      grid-area: blog-grid;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+      grid-column-gap: 2em;
+    }
 }
