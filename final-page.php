@@ -17,9 +17,9 @@
     <a href="/coming-soon.php" >Contact</a>
   </nav>
   <div class="social-media">
-    <a href="" ><img src="/images/SVG-icons/facebook.svg" alt="Facebook Logo"></a>
-    <a href="" ><img src="/images/SVG-icons/twitter.svg" alt="Twitter Logo"></a>
-    <a href="" ><img src="/images/SVG-icons/instagram.svg" alt="Instagram Logo"></a>
+    <a href="" ><img src="/images/facebook.svg" alt="Facebook Logo"></a>
+    <a href="" ><img src="/images/twitter.svg" alt="Twitter Logo"></a>
+    <a href="" ><img src="/images/instagram.svg" alt="Instagram Logo"></a>
   </div>
 </header>
 
@@ -34,7 +34,7 @@
       <p>So, the website is finished, everything looks awesome. One question, how well does it perform?<p>
 
       <p>It’s all good having a website that looks good, but it’s no good if firstly, no one can find it and secondly, when people find it it takes a week to load. Luckily there are some cool tricks and tips that can help all of this.</p>
-      <div class="read-more-btn" ><p><a href="/blog-post.php" >Read Blog Post</a></p></div>
+      <a href="/performance-and-optimisation.php" ><div class="read-more-btn" ><p>Read Blog Post</p></div></a>
     </div>
     <div class="blog-grid">
       <a href="#">
@@ -56,9 +56,9 @@
       <a href="#">
         <article>
           <img src="/images/blog-post.jpg" alt="Woman standing on mountain with keep exploring written on a flag">
-          <h2>Blog Title</h2>
-          <p class="small">1st March 2017 - Matthew Windle</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+          <h2>Making Changes</h2>
+          <p class="small">10th March 2017 - Matthew Windle</p>
+          <p>When developing a website on your own can come with a few disadvantages, one of them is overlooking your own mistakes over and over. </p>
         </article>
       </a>
     </div>

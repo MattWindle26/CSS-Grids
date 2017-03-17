@@ -27,6 +27,21 @@
 
   <div class="post-grid">
     <div class="post-image"></div>
+    <div class="blog-post-header">
+      <h1>Making changes</h1>
+    </div>
+    <article class="main-post">
+    </article>
+    <div class="post-sidebar" >
+      <div class="sidebar-nav">
+        <h3>Recent Posts</h3>
+        <a href="">Building my portfolio</a>
+        <a href="">The Industry</a>
+      </div>
+      <h3>About Matthew</h3>
+      <p>Matthew Windle is a 27 year old front-end web developer with a passion for all things techie.</p>
+    </div>
+
   </div>
 </main>
 <footer class="shadow">
